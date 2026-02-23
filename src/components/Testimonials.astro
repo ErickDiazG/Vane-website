@@ -1,0 +1,87 @@
+---
+const testimonials = [
+  {
+    name: 'María García López',
+    role: 'Paciente de limpieza dental',
+    text: 'La atención de Vanessa fue increíble. Me explicó todo el procedimiento con paciencia y me sentí muy cómoda durante toda la cita. Mi sonrisa quedó como nueva. ¡Totalmente recomendada!',
+    rating: 5,
+    initials: 'MG',
+  },
+  {
+    name: 'Carlos Rodríguez',
+    role: 'Padre de paciente infantil',
+    text: 'Llevé a mi hija de 5 años y fue la mejor experiencia. Vanessa tiene un trato especial con los niños, mi hija no lloró ni un segundo. Ahora quiere volver al dentista, ¡algo que nunca pensé que pasaría!',
+    rating: 5,
+    initials: 'CR',
+  },
+  {
+    name: 'Ana Sofía Martínez',
+    role: 'Paciente de prótesis removible',
+    text: 'Después de años sin poder sonreír con confianza, Vanessa me devolvió la seguridad. La prótesis quedó perfecta, se ve muy natural y puedo comer sin problemas. Excelente profesional.',
+    rating: 5,
+    initials: 'AS',
+  },
+];
+---
+
+<section id="testimonios" class="py-20 lg:py-28 bg-white relative overflow-hidden">
+  <!-- Decorative -->
+  <div class="absolute top-1/2 left-0 w-72 h-72 bg-lavender-100/30 rounded-full blur-3xl -translate-x-1/2"></div>
+  <div class="absolute bottom-0 right-0 w-80 h-80 bg-lavender-50/40 rounded-full blur-3xl translate-x-1/3"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+    <!-- Header -->
+    <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+      <div class="inline-flex items-center gap-2 bg-lavender-100 text-lavender-600 px-4 py-1.5 rounded-full text-sm font-medium mb-4">
+        <span class="material-symbols-rounded text-[16px]">reviews</span>
+        Testimonios
+      </div>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-[var(--font-heading)] text-dark">
+        Lo que dicen nuestros
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-lavender-400 to-lavender-600">pacientes</span>
+      </h2>
+      <p class="mt-4 text-gray-soft text-lg">
+        La satisfacción de nuestros pacientes es nuestra mayor recompensa.
+      </p>
+    </div>
+
+    <!-- Testimonial Cards -->
+    <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
+      {testimonials.map((testimonial, index) => (
+        <div
+          class="reveal bg-gradient-to-br from-white to-lavender-50/50 rounded-2xl p-8 border border-lavender-100 hover:border-lavender-300 transition-all duration-300 hover:shadow-xl hover:shadow-lavender-200/20 hover:-translate-y-1 relative"
+          style={`transition-delay: ${index * 0.1}s;`}
+        >
+          <!-- Quote icon -->
+          <div class="absolute top-6 right-6 text-lavender-200">
+            <span class="material-symbols-rounded text-[40px]">format_quote</span>
+          </div>
+
+          <!-- Stars -->
+          <div class="flex gap-1 mb-4">
+            {Array.from({ length: testimonial.rating }).map(() => (
+              <span class="material-symbols-rounded text-amber-400 text-[20px]">star</span>
+            ))}
+          </div>
+
+          <!-- Text -->
+          <p class="text-gray-soft leading-relaxed text-sm mb-6 relative z-10">
+            "{testimonial.text}"
+          </p>
+
+          <!-- Author -->
+          <div class="flex items-center gap-3 pt-4 border-t border-lavender-100">
+            <div class="w-11 h-11 bg-gradient-to-br from-lavender-400 to-lavender-600 rounded-full flex items-center justify-center text-white font-bold text-sm shadow-md">
+              {testimonial.initials}
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-dark">{testimonial.name}</p>
+              <p class="text-xs text-gray-soft">{testimonial.role}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
