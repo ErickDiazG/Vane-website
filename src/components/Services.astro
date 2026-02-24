@@ -134,6 +134,7 @@ const categories = [
             <div
               class="treatment-card group bg-white rounded-2xl p-6 border border-lavender-100 hover:border-lavender-300 transition-all duration-300 hover:shadow-xl hover:shadow-lavender-200/30 hover:-translate-y-1 cursor-pointer"
               data-index={`${catIndex}-${index}`}
+              style={`--card-index: ${index};`}
             >
               <!-- Card Header -->
               <div class="flex items-start gap-4 mb-3">
@@ -202,3 +203,30 @@ const categories = [
     });
   });
 </script>
+
+<style>
+  /* Progressive Enhancement: Staggered Staggered Animation for Treatment Cards */
+  
+  /* Initial state: Hidden and translated slightly down, but ONLY if JS is enabled */
+  :global(.js-enabled) .reveal .treatment-card {
+    opacity: 0;
+    transform: translateY(20px);
+    /* Performance optimization: transition specific properties, NOT 'all' */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    /* Mobile-first: No stagger delay on mobile to avoid phantom cascades */
+    transition-delay: 0ms;
+  }
+
+  /* Desktop/Tablet state: Apply staggered delay using CSS variable */
+  @media (min-width: 768px) {
+    :global(.js-enabled) .reveal .treatment-card {
+      transition-delay: calc(var(--card-index) * 75ms);
+    }
+  }
+
+  /* Final state: Visible when parent category gets .visible class */
+  :global(.js-enabled) .reveal.visible .treatment-card {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>

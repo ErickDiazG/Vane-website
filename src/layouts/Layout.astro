@@ -8,6 +8,7 @@ const {
   title = "Vandent. | Odontología Profesional",
   description = "Cuidamos tu sonrisa con tratamientos dentales de calidad. Odontología general, infantil y prótesis. Agenda tu cita hoy."
 } = Astro.props;
+import FloatingChat from '../components/FloatingChat.astro';
 ---
 
 <!doctype html>
@@ -39,6 +40,11 @@ const {
         font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
       }
     </style>
+
+    <!-- Progressive Enhancement: Add js-enabled class if JS is active -->
+    <script>
+      document.documentElement.classList.add('js-enabled');
+    </script>
   </head>
   <body class="min-h-screen flex flex-col">
     <slot />

@@ -3,12 +3,12 @@ const navLinks = [
   { name: 'Inicio', href: '#inicio' },
   { name: 'Sobre mí', href: '#sobre-mi' },
   { name: 'Tratamientos', href: '#tratamientos' },
-  { name: 'Testimonios', href: '#testimonios' },
+  // { name: 'Testimonios', href: '#testimonios' },
   { name: 'Contacto', href: '#contacto' },
 ];
 
 const whatsappNumber = '528991198089';
-const whatsappMessage = encodeURIComponent('Hola, buenas tardes. Me gustaría agendar una cita. 😊');
+const whatsappMessage = encodeURIComponent('Hola Dra. Vanessa, vi tu página web y me gustaría agendar una cita. 😊');
 const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 ---
 
@@ -18,8 +18,9 @@ const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
       <!-- Logo -->
       <a href="#inicio" class="flex items-center gap-2 group">
-        <span class="text-2xl lg:text-3xl font-extrabold font-[var(--font-heading)] tracking-tight text-dark transition-colors duration-300">
-          Vandent<span class="text-lavender-400 group-hover:text-lavender-600 transition-colors duration-300">.</span>
+        <span class="text-2xl lg:text-3xl font-[var(--font-heading)] tracking-tight text-dark transition-colors duration-300 flex gap-1.5">
+          <span class="font-extrabold group-hover:text-lavender-500 transition-colors duration-300">Vanessa</span>
+          <span class="font-normal text-lavender-600 group-hover:text-lavender-500 transition-colors duration-300">Hernández</span>
         </span>
       </a>
 
@@ -37,7 +38,7 @@ const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
           href={whatsappLink}
           target="_blank"
           rel="noopener noreferrer"
-          class="inline-flex items-center gap-2 bg-lavender-400 hover:bg-lavender-500 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-lavender-400/30 hover:-translate-y-0.5"
+          class="inline-flex items-center gap-2 border-2 border-lavender-400 text-lavender-500 hover:bg-lavender-50 hover:text-lavender-600 px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-lavender-200/50 hover:-translate-y-0.5"
         >
           <span class="material-symbols-rounded text-[18px]">calendar_month</span>
           Agendar Cita
