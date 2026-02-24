@@ -1,5 +1,5 @@
 ---
-const whatsappNumber = '528994519124'; // Using the WhatsApp number from the Navbar
+const whatsappNumber = '528991198089'; // Using the WhatsApp number from the Navbar
 const whatsappMessage = encodeURIComponent('Hola Dra. Vanessa, vi su página web y me gustaría consultar sobre...');
 const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 ---
@@ -46,62 +46,61 @@ const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
   </a>
 </div>
 
-<script is:inline>
-  // Use IIFE to avoid global scope pollution while ensuring immediate execution
-  (function() {
-    const initFloatingChat = () => {
-      const bubble = document.getElementById('welcome-bubble');
-      const closeBtn = document.getElementById('close-bubble');
+<script>
+  function setupFloatingChat() {
+    const bubble = document.getElementById('welcome-bubble');
+    const closeBtn = document.getElementById('close-bubble');
 
-      // Make sure we only execute if elements exist
-      if (bubble && closeBtn) {
-        // Check if user has already dismissed it in this session/state
-        const isDismissed = sessionStorage.getItem('vandent_chat_dismissed');
+    if (!bubble || !closeBtn) return;
 
-        if (!isDismissed) {
-          // Remove 'hidden' to render it in DOM, then animate opacity/transform
-          setTimeout(() => {
-            if (bubble.classList.contains('hidden')) {
-              bubble.classList.remove('hidden');
-              // Brief delay to allow browser to render block before animating transitions
-              setTimeout(() => {
-                bubble.classList.remove('opacity-0', 'translate-y-4');
-                bubble.classList.add('opacity-100', 'translate-y-0');
-              }, 50);
-            }
-          }, 3000); // 3 seconds delay
-        }
+    // Check if user has already dismissed it
+    try {
+      if (sessionStorage.getItem('vandent_chat_dismissed') === 'true') {
+        return;
+      }
+    } catch (e) {
+      // Ignore sessionStorage errors (e.g. strict privacy settings)
+    }
 
-      // Handle close button
-      // Use cloneNode to prevent multiple event listeners if script runs multiple times
-      const newCloseBtn = closeBtn.cloneNode(true);
-      closeBtn.parentNode?.replaceChild(newCloseBtn, closeBtn);
-
-      newCloseBtn.addEventListener('click', (e) => {
-        const ev = e as MouseEvent;
-        ev.preventDefault(); // Prevent navigating to href if sitting inside one
-        ev.stopPropagation(); // Stop bubbling
-        
-        // Animate out
-        bubble.classList.remove('opacity-100', 'translate-y-0');
-        bubble.classList.add('opacity-0', 'translate-y-4');
-        
+    // Show the bubble after 3 seconds
+    setTimeout(() => {
+      if (bubble.classList.contains('hidden')) {
+        bubble.classList.remove('hidden');
+        // Brief delay to allow browser to render before animating
         setTimeout(() => {
-            bubble.classList.add('hidden');
-        }, 500); // match transition duration
-        
-        // Remember dismissal for this session
+          bubble.classList.remove('opacity-0', 'translate-y-4');
+          bubble.classList.add('opacity-100', 'translate-y-0');
+        }, 50);
+      }
+    }, 3000);
+
+    // Function to hide bubble
+    const hideBubble = (e) => {
+      if (e) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+      
+      bubble.classList.remove('opacity-100', 'translate-y-0');
+      bubble.classList.add('opacity-0', 'translate-y-4');
+      
+      setTimeout(() => {
+        bubble.classList.add('hidden');
+      }, 500);
+      
+      try {
         sessionStorage.setItem('vandent_chat_dismissed', 'true');
-      });
+      } catch (err) {}
     };
 
-    // Run on both standard load and Astro's view transitions
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', initFloatingChat);
-    } else {
-      initFloatingChat();
-    }
-    
-    document.addEventListener('astro:page-load', initFloatingChat);
-  })();
+    // Remove existing listener to prevent duplicates on view transition re-renders
+    closeBtn.removeEventListener('click', hideBubble);
+    closeBtn.addEventListener('click', hideBubble);
+  }
+
+  // Run on first load
+  setupFloatingChat();
+  
+  // Re-run safely on Astro view transitions
+  document.addEventListener('astro:page-load', setupFloatingChat);
 </script>

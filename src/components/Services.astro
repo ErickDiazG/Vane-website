@@ -6,91 +6,110 @@ const categories = [
     color: 'lavender',
     treatments: [
       {
-        name: 'Historia Clínica',
-        icon: 'description',
-        shortDesc: 'Evaluación completa de tu salud bucal.',
-        fullDesc: 'Realizamos una evaluación integral que incluye examen clínico completo, radiografías cuando es necesario, y un plan de tratamiento personalizado. Es el primer paso para cuidar tu sonrisa de manera preventiva y profesional.',
-      },
-      {
-        name: 'Empastes (Resina)',
-        icon: 'build',
-        shortDesc: 'Restauraciones estéticas del color de tus dientes.',
-        fullDesc: 'Las resinas dentales son restauraciones estéticas que devuelven la forma y función a dientes dañados por caries. Utilizamos materiales de alta calidad que se mimetizan con el color natural de tus dientes para un resultado invisible y duradero.',
-      },
-      {
         name: 'Limpieza Dental',
         icon: 'cleaning_services',
         shortDesc: 'Limpieza profunda para una sonrisa saludable.',
-        fullDesc: 'La profilaxis dental elimina el sarro y la placa bacteriana que se acumula con el tiempo. Incluye pulido dental y aplicación de flúor. Se recomienda realizarla cada 6 meses para mantener tus encías sanas y prevenir enfermedades.',
+        fullDesc: 'La profilaxis dental elimina el sarro y la placa bacteriana acumulada. Incluye pulido dental y aplicación de flúor. Es el tratamiento base para mantener tus encías sanas y prevenir enfermedades mayores.',
+      },
+      {
+        name: 'Empastes de Resina',
+        icon: 'build',
+        shortDesc: 'Restauraciones estéticas del color de tus dientes.',
+        fullDesc: 'Eliminamos la caries y restauramos la anatomía del diente con resinas de alta estética que se mimetizan perfectamente. Devolvemos la función y belleza a tu sonrisa de forma conservadora.',
+      },
+      {
+        name: 'Historia Clínica y Evaluación',
+        icon: 'description',
+        shortDesc: 'Diagnóstico integral de tu salud bucal.',
+        fullDesc: 'Evaluación completa que incluye examen clínico detallado y plan de tratamiento personalizado. Como tu odontóloga de cabecera, nos enfocamos en detectar problemas antes de que causen dolor.',
       },
       {
         name: 'Extracciones Dentales',
         icon: 'emergency',
-        shortDesc: 'Retiro de dientes dañados de forma segura.',
-        fullDesc: 'Las extracciones se realizan cuando un diente presenta daño severo por caries, fractura dental, gran movilidad o restos radiculares. Utilizamos técnicas modernas y anestesia local para que el proceso sea lo más cómodo y seguro posible.',
+        shortDesc: 'Retiro seguro de piezas con daño severo.',
+        fullDesc: 'Procedimiento realizado con técnicas modernas y anestesia local para garantizar tu comodidad. Nos enfocamos en preservar la salud de los tejidos circundantes durante el proceso.',
       },
       {
-        name: 'Endodoncias',
-        icon: 'healing',
-        shortDesc: 'Tratamiento de conductos para salvar tus dientes.',
-        fullDesc: 'La endodoncia es un tratamiento que permite conservar dientes que de otra manera deberían ser extraídos. Consiste en remover el nervio afectado, limpiar y sellar los conductos para eliminar la infección y el dolor, salvando así tu pieza dental.',
-      },
+        name: 'Amalgamas Dentales',
+        icon: 'layers',
+        shortDesc: 'Restauraciones metálicas de alta durabilidad.',
+        fullDesc: 'Tratamiento restaurador clásico para cavidades donde se requiere una resistencia superior al desgaste, siempre evaluando la mejor opción para tu caso particular.',
+      }
     ]
   },
   {
-    name: 'Odontología Infantil',
+    name: 'Odontología Infantil (3-13 años)',
     icon: 'child_care',
     color: 'pink',
     treatments: [
       {
         name: 'Consulta Dental Infantil',
         icon: 'stethoscope',
-        shortDesc: 'Primera visita dental para tu pequeño.',
-        fullDesc: 'La consulta dental infantil es fundamental para detectar problemas a temprana edad. Se realiza un examen completo adaptado a los niños, en un ambiente cálido y amigable para que se sientan cómodos. Edad: a partir de 3 a 13 años.',
+        shortDesc: 'Primera visita dental llena de paciencia.',
+        fullDesc: 'Examen adaptado para niños en un ambiente de confianza. Nos tomamos el tiempo necesario para que tu pequeño se sienta seguro y aprenda la importancia de cuidar sus dientes.',
       },
       {
-        name: 'Selladores',
+        name: 'Limpieza Dental Infantil',
+        icon: 'brush',
+        shortDesc: 'Profilaxis suave para dientes de leche.',
+        fullDesc: 'Eliminación de placa y manchas en dientes temporales, acompañada de una técnica de cepillado divertida y aplicación de flúor para fortalecer el esmalte.',
+      },
+      {
+        name: 'Selladores Preventivos',
         icon: 'shield',
-        shortDesc: 'Protección contra caries en molares.',
-        fullDesc: 'Los selladores son una capa protectora que se aplica en las superficies de masticación de los molares para prevenir la acumulación de bacterias y alimentos. Es un procedimiento rápido, indoloro y muy efectivo para prevenir caries en niños.',
+        shortDesc: 'Barrera protectora contra las caries.',
+        fullDesc: 'Capa protectora que se aplica en las fosetas de los molares para evitar que los restos de comida y bacterias causen caries en las zonas más difíciles de limpiar.',
       },
       {
-        name: 'Pulpotomías',
-        icon: 'medical_information',
-        shortDesc: 'Tratamiento del nervio en dientes de leche.',
-        fullDesc: 'La pulpotomía es un procedimiento donde se remueve parcialmente el tejido pulpar inflamado de un diente temporal. Es fundamental para mantener el diente en boca hasta que sea reemplazado naturalmente por el permanente.',
+        name: 'Empastes Infantiles',
+        icon: 'health_and_safety',
+        shortDesc: 'Resinas estéticas para los más pequeños.',
+        fullDesc: 'Tratamiento de caries en dientes temporales con materiales biocompatibles, asegurando que el diente cumpla su función hasta que sea reemplazado naturalmente.',
       },
       {
-        name: 'Pulpectomías',
-        icon: 'vaccines',
-        shortDesc: 'Tratamiento completo de conductos infantil.',
-        fullDesc: 'La pulpectomía se realiza cuando la infección del nervio es más extensa. Se retira todo el tejido pulpar y se rellena con un material biocompatible que se reabsorbe con el tiempo, permitiendo la erupción normal del diente permanente.',
-      },
-      {
-        name: 'Mantenedores de Espacio',
-        icon: 'straighten',
-        shortDesc: 'Preservan el espacio para dientes permanentes.',
-        fullDesc: 'Cuando se pierde un diente de leche prematuramente, el mantenedor de espacio preserva el lugar para que el diente permanente erupcione correctamente. Evita que los dientes adyacentes se desplacen y causa problemas de alineación futuros.',
-      },
-      {
-        name: 'Coronitas',
-        icon: 'diamond',
-        shortDesc: 'Fundas protectoras para dientes temporales.',
-        fullDesc: 'Las coronas infantiles (coronitas) se utilizan para restaurar dientes de leche con daño extenso. Son fundas preformadas de acero cromo o estéticas que protegen el diente temporal hasta que caiga de forma natural y sea reemplazado.',
-      },
+        name: 'Extracciones de Leche',
+        icon: 'keyboard_arrow_up',
+        shortDesc: 'Retiro de dientes temporales cuando es necesario.',
+        fullDesc: 'Procedimiento rápido y cuidadoso para piezas deciduas que presentan infección o que están interfiriendo con la erupción de los dientes permanentes.',
+      }
     ]
   },
   {
-    name: 'Prótesis',
-    icon: 'genres',
+    name: 'Tratamientos Especializados',
+    icon: 'auto_fix_high',
     color: 'purple',
+    note: 'Procedimientos realizados bajo estrictos protocolos y el respaldo de la infraestructura de la Clínica UMAN.',
     treatments: [
       {
-        name: 'Prótesis Removible',
-        icon: 'auto_fix_high',
-        shortDesc: 'Recupera la función y estética dental.',
-        fullDesc: 'La prótesis removible es ideal para personas con pérdida de 3 o más dientes. Mejora la estética dental, restaura la capacidad de hablar y masticar correctamente, y se ofrece a precios accesibles. Se diseña de forma personalizada para cada paciente, garantizando comodidad y un aspecto natural.',
+        name: 'Endodoncias',
+        icon: 'healing',
+        shortDesc: 'Tratamiento de conductos clínicos.',
+        fullDesc: 'Permite conservar dientes afectados que de otra manera deberían ser extraídos, removiendo el nervio e infección bajo supervisión y protocolos clínicos rigurosos.',
       },
+      {
+        name: 'Prótesis Fija (Coronas y Puentes)',
+        icon: 'diamond',
+        shortDesc: 'Restauración permanente de piezas perdidas.',
+        fullDesc: 'Diseño y colocación de coronas dentales o puentes fijos para devolver la estética y la capacidad masticatoria de forma definitiva y segura.',
+      },
+      {
+        name: 'Prótesis Removible',
+        icon: 'diversity_2',
+        shortDesc: 'Recupera la función y armonía dental.',
+        fullDesc: 'Diseñamos prótesis personalizadas que restauran la capacidad de hablar y masticar cómodamente, integrando armonía estética con el respaldo de laboratorio clínico.',
+      },
+      {
+        name: 'Odontología Infantil Avanzada',
+        icon: 'medical_information',
+        shortDesc: 'Pulpotomías, Pulpectomías y Mantenedores.',
+        fullDesc: 'Tratamientos especializados dirigidos a conservar la salud de la pulpa dental en niños y asegurar el espacio correcto para los dientes permanentes.',
+      },
+      {
+        name: 'Coronitas de Acero Cromo',
+        icon: 'verified',
+        shortDesc: 'Protección total para molares infantiles.',
+        fullDesc: 'Restauraciones altamente resistentes para dientes de leche con daño extenso, garantizando su permanencia hasta el recambio natural.',
+      }
     ]
   }
 ];
@@ -102,106 +121,187 @@ const categories = [
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
     <!-- Section Header -->
-    <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+    <div class="text-center max-w-2xl mx-auto mb-12 reveal">
       <div class="inline-flex items-center gap-2 bg-lavender-100 text-lavender-600 px-4 py-1.5 rounded-full text-sm font-medium mb-4">
         <span class="material-symbols-rounded text-[16px]">medical_services</span>
-        Servicios
+        Especialidades
       </div>
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-[var(--font-heading)] text-dark">
-        Nuestros
-        <span class="text-transparent bg-clip-text bg-gradient-to-r from-lavender-400 to-lavender-600">Tratamientos</span>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-[var(--font-heading)] text-lavender-700">
+        Tratamientos Dentales
       </h2>
       <p class="mt-4 text-gray-soft text-lg">
-        Ofrecemos una amplia gama de servicios para cuidar la sonrisa de toda tu familia.
+        Selecciona una categoría para explorar cómo podemos ayudarte a mejorar tu salud bucal.
       </p>
     </div>
 
-    <!-- Categories -->
-    {categories.map((category, catIndex) => (
-      <div class="mb-16 last:mb-0 reveal">
-        <!-- Category Header -->
-        <div class="flex items-center gap-3 mb-8">
-          <div class="w-10 h-10 bg-lavender-400 rounded-xl flex items-center justify-center shadow-md">
-            <span class="material-symbols-rounded text-white text-[22px]">{category.icon}</span>
-          </div>
-          <h3 class="text-xl sm:text-2xl font-bold font-[var(--font-heading)] text-dark">{category.name}</h3>
-          <div class="flex-1 h-px bg-gradient-to-r from-lavender-200 to-transparent"></div>
-        </div>
+    <!-- Tabs Navigation -->
+    <div class="flex flex-wrap justify-center gap-3 mb-16 reveal">
+      {categories.map((category, index) => (
+        <button 
+          class={`px-6 py-3 rounded-full text-sm font-bold transition-all duration-300 tab-btn flex items-center gap-2 border shadow-sm ${index === 0 ? 'active bg-lavender-600 text-white border-lavender-600 shadow-lavender-400/30' : 'bg-white text-gray-soft border-lavender-100 hover:border-lavender-300 hover:bg-lavender-50'}`}
+          data-category={index}
+        >
+          <span class="material-symbols-rounded text-[18px]">{category.icon}</span>
+          {category.name}
+        </button>
+      ))}
+    </div>
 
-        <!-- Treatment Cards Grid -->
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {category.treatments.map((treatment, index) => (
-            <div
-              class="treatment-card group bg-white rounded-2xl p-6 border border-lavender-100 hover:border-lavender-300 transition-all duration-300 hover:shadow-xl hover:shadow-lavender-200/30 hover:-translate-y-1 cursor-pointer"
-              data-index={`${catIndex}-${index}`}
-              style={`--card-index: ${index};`}
-            >
-              <!-- Card Header -->
-              <div class="flex items-start gap-4 mb-3">
-                <div class="w-12 h-12 bg-lavender-100 group-hover:bg-lavender-400 rounded-xl flex items-center justify-center transition-colors duration-300 shrink-0">
-                  <span class="material-symbols-rounded text-lavender-500 group-hover:text-white text-[24px] transition-colors duration-300">{treatment.icon}</span>
-                </div>
-                <div>
-                  <h4 class="text-base font-bold text-dark leading-snug">{treatment.name}</h4>
-                  <p class="text-sm text-gray-soft mt-1 leading-relaxed treatment-short">{treatment.shortDesc}</p>
-                </div>
-              </div>
-
-              <!-- Expandable Detail -->
-              <div class="treatment-detail max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
-                <div class="pt-3 mt-3 border-t border-lavender-100">
-                  <p class="text-sm text-gray-soft leading-relaxed">{treatment.fullDesc}</p>
-                </div>
-              </div>
-
-              <!-- Toggle indicator -->
-              <div class="flex items-center gap-1 mt-3 text-lavender-400 group-hover:text-lavender-600 transition-colors duration-300">
-                <span class="text-xs font-medium toggle-text">Ver más</span>
-                <span class="material-symbols-rounded text-[16px] transition-transform duration-300 toggle-icon">expand_more</span>
-              </div>
+    <!-- Categories Content -->
+    <div class="relative min-h-[400px]">
+      {categories.map((category, catIndex) => (
+        <div 
+          class={`category-content transition-all duration-500 ease-in-out ${catIndex === 0 ? 'block' : 'hidden opacity-0 translate-y-8'}`}
+          data-category={catIndex}
+        >
+          {category.note && (
+            <div class="max-w-3xl mx-auto bg-lavender-50 border border-lavender-100 rounded-2xl p-4 mb-10 flex items-start gap-3 shadow-inner">
+              <span class="material-symbols-rounded text-lavender-500 mt-0.5">verified_user</span>
+              <p class="text-sm text-lavender-800 leading-relaxed font-medium">
+                {category.note}
+              </p>
             </div>
-          ))}
+          )}
+
+          <!-- Treatment Cards Grid -->
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {category.treatments.map((treatment, index) => (
+              <div
+                class="treatment-card group bg-white rounded-2xl p-6 border border-lavender-100 hover:border-lavender-300 transition-all duration-300 hover:shadow-2xl hover:shadow-lavender-200/40 hover:-translate-y-2 cursor-pointer relative"
+                style={`--card-index: ${index};`}
+              >
+                <div class="flex items-start gap-4 mb-4">
+                  <div class={`w-12 h-12 rounded-xl bg-lavender-50 flex items-center justify-center text-lavender-600 group-hover:bg-lavender-600 group-hover:text-white transition-colors duration-300`}>
+                    <span class="material-symbols-rounded text-[24px]">{treatment.icon}</span>
+                  </div>
+                  <div class="flex-1">
+                    <h4 class="text-lg font-extrabold text-dark-soft leading-tight group-hover:text-lavender-700 transition-colors uppercase tracking-tight">{treatment.name}</h4>
+                    <p class="text-sm text-gray-soft mt-2 leading-relaxed treatment-short font-medium">{treatment.shortDesc}</p>
+                  </div>
+                </div>
+
+                <!-- Expandable Detail -->
+                <div class="treatment-detail max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                  <div class="pt-4 mt-4 border-t border-dashed border-lavender-200">
+                    <p class="text-[14px] text-gray-soft leading-relaxed bg-lavender-50/50 p-3 rounded-lg border border-lavender-100/50 italic">
+                      {treatment.fullDesc}
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Toggle indicator -->
+                <div class="flex items-center justify-between mt-4">
+                   <div class="flex items-center gap-1.5 text-lavender-600 font-bold text-xs uppercase tracking-widest">
+                    <span class="toggle-text">Detalles</span>
+                    <span class="material-symbols-rounded text-[18px] transition-transform duration-300 toggle-icon">add_circle</span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-    ))}
+      ))}
+    </div>
   </div>
 </section>
 
 <script>
-  // Treatment card expand/collapse
-  document.querySelectorAll('.treatment-card').forEach(card => {
-    card.addEventListener('click', () => {
-      const detail = card.querySelector('.treatment-detail') as HTMLElement;
-      const toggleText = card.querySelector('.toggle-text');
-      const toggleIcon = card.querySelector('.toggle-icon');
-      const isOpen = detail?.classList.contains('max-h-96');
+  function initServices() {
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const contents = document.querySelectorAll('.category-content');
+    const cards = document.querySelectorAll('.treatment-card');
 
-      // Close all other cards
-      document.querySelectorAll('.treatment-card').forEach(other => {
-        if (other !== card) {
-          const otherDetail = other.querySelector('.treatment-detail') as HTMLElement;
-          const otherText = other.querySelector('.toggle-text');
-          const otherIcon = other.querySelector('.toggle-icon');
-          otherDetail?.classList.remove('max-h-96');
-          otherDetail?.classList.add('max-h-0');
-          if (otherText) otherText.textContent = 'Ver más';
-          otherIcon?.classList.remove('rotate-180');
-        }
+    // Tab Switching Logic
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const catIndex = btn.getAttribute('data-category');
+
+        // Update Buttons
+        tabBtns.forEach(b => {
+          b.classList.remove('active', 'bg-lavender-600', 'text-white', 'border-lavender-600', 'shadow-lavender-400/30');
+          b.classList.add('bg-white', 'text-gray-600', 'border-lavender-100');
+        });
+        btn.classList.add('active', 'bg-lavender-600', 'text-white', 'border-lavender-600', 'shadow-lavender-400/30');
+        btn.classList.remove('bg-white', 'text-gray-600', 'border-lavender-100');
+
+        // Transition Contents
+        contents.forEach(content => {
+          if (content.getAttribute('data-category') === catIndex) {
+            content.classList.remove('hidden');
+            setTimeout(() => {
+              content.classList.remove('opacity-0', 'translate-y-8');
+              content.classList.add('opacity-100', 'translate-y-0');
+            }, 10);
+            
+          } else {
+            content.classList.add('opacity-0', 'translate-y-8');
+            content.classList.remove('opacity-100', 'translate-y-0');
+            setTimeout(() => {
+              content.classList.add('hidden');
+            }, 500);
+          }
+        });
       });
-
-      if (isOpen) {
-        detail?.classList.remove('max-h-96');
-        detail?.classList.add('max-h-0');
-        if (toggleText) toggleText.textContent = 'Ver más';
-        toggleIcon?.classList.remove('rotate-180');
-      } else {
-        detail?.classList.remove('max-h-0');
-        detail?.classList.add('max-h-96');
-        if (toggleText) toggleText.textContent = 'Ver menos';
-        toggleIcon?.classList.add('rotate-180');
-      }
     });
-  });
+
+    // Card Accordion Logic
+    function expandCard(card) {
+        const detail = card.querySelector('.treatment-detail');
+        const toggleText = card.querySelector('.toggle-text');
+        const toggleIcon = card.querySelector('.toggle-icon');
+
+        // Close others in SAME category
+        card.closest('.category-content').querySelectorAll('.treatment-card').forEach(other => {
+          if (other !== card) {
+            const otherDetail = other.querySelector('.treatment-detail');
+            const otherText = other.querySelector('.toggle-text');
+            const otherIcon = other.querySelector('.toggle-icon');
+            otherDetail?.classList.remove('max-h-96');
+            otherDetail?.classList.add('max-h-0');
+            if (otherText) otherText.textContent = 'Detalles';
+            if (otherIcon) {
+                otherIcon.textContent = 'add_circle';
+                otherIcon.style.transform = 'rotate(0deg)';
+            }
+          }
+        });
+
+        // Toggle current
+        const isOpen = detail?.classList.contains('max-h-96');
+        if (isOpen) {
+          detail?.classList.remove('max-h-96');
+          detail?.classList.add('max-h-0');
+          if (toggleText) toggleText.textContent = 'Detalles';
+          if (toggleIcon) {
+            toggleIcon.textContent = 'add_circle';
+            toggleIcon.style.transform = 'rotate(0deg)';
+          }
+        } else {
+          detail?.classList.remove('max-h-0');
+          detail?.classList.add('max-h-96');
+          if (toggleText) toggleText.textContent = 'Cerrar';
+          if (toggleIcon) {
+            toggleIcon.textContent = 'do_not_disturb_on';
+            toggleIcon.style.transform = 'rotate(180deg)';
+          }
+        }
+    }
+
+    cards.forEach(card => {
+       card.addEventListener('click', (e) => {
+         expandCard(card);
+       });
+    });
+
+    // Initial State: Expand Limpieza Dental
+    setTimeout(() => {
+        const firstCard = document.querySelector('.treatment-card');
+        if (firstCard) expandCard(firstCard);
+    }, 800);
+  }
+
+  // Init
+  initServices();
 </script>
 
 <style>
