@@ -138,7 +138,7 @@ const categories = [
     <div class="flex flex-wrap justify-center gap-3 mb-16 reveal">
       {categories.map((category, index) => (
         <button 
-          class={`px-6 py-3 rounded-full text-sm font-bold transition-all duration-300 tab-btn flex items-center gap-2 border shadow-sm ${index === 0 ? 'active bg-lavender-600 text-white border-lavender-600 shadow-lavender-400/30' : 'bg-white text-gray-soft border-lavender-100 hover:border-lavender-300 hover:bg-lavender-50'}`}
+          class={`px-6 py-3 rounded-full text-sm font-bold transition-colors duration-300 tab-btn flex items-center gap-2 border shadow-sm ${index === 0 ? 'active bg-lavender-600 text-white border-lavender-600 shadow-lavender-400/30' : 'bg-white text-gray-soft border-lavender-100 hover:border-lavender-300 hover:bg-lavender-50'}`}
           data-category={index}
         >
           <span class="material-symbols-rounded text-[18px]">{category.icon}</span>
@@ -167,7 +167,7 @@ const categories = [
           <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {category.treatments.map((treatment, index) => (
               <div
-                class="treatment-card group bg-white rounded-2xl p-6 border border-lavender-100 hover:border-lavender-300 transition-all duration-300 hover:shadow-2xl hover:shadow-lavender-200/40 hover:-translate-y-2 cursor-pointer relative"
+                class="treatment-card group bg-white rounded-2xl p-6 border border-lavender-100 hover:border-lavender-300 transition-shadow duration-300 hover:shadow-2xl hover:shadow-lavender-200/40 hover:-translate-y-2 cursor-pointer relative"
                 style={`--card-index: ${index};`}
               >
                 <div class="flex items-start gap-4 mb-4">

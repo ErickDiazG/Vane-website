@@ -13,7 +13,7 @@ const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
   >
     <button 
       id="close-bubble" 
-      class="absolute -top-2 -right-2 w-6 h-6 bg-white border border-lavender-100 rounded-full flex items-center justify-center text-gray-400 hover:text-dark hover:bg-lavender-50 transition-colors shadow-sm"
+      class="absolute -top-2 -right-2 w-11 h-11 bg-white border border-lavender-100 rounded-full flex items-center justify-center text-gray-400 hover:text-dark hover:bg-lavender-50 active:scale-90 transition-colors shadow-sm"
       aria-label="Cerrar mensaje"
     >
       <span class="material-symbols-rounded text-[14px]">close</span>
@@ -37,7 +37,7 @@ const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
     href={whatsappLink}
     target="_blank"
     rel="noopener noreferrer"
-    class="w-14 h-14 bg-[#25D366] hover:bg-[#20bd5a] text-white rounded-full flex items-center justify-center shadow-lg shadow-[#25D366]/30 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 pointer-events-auto group"
+    class="w-14 h-14 bg-[#25D366] hover:bg-[#20bd5a] active:scale-95 text-white rounded-full flex items-center justify-center shadow-lg shadow-[#25D366]/30 hover:shadow-xl hover:-translate-y-1 transition-colors duration-300 pointer-events-auto group"
     aria-label="Contactar por WhatsApp"
   >
     <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

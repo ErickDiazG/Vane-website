@@ -1,20 +1,17 @@
 @import "tailwindcss";
 
-/* ── Google Fonts ── */
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
-
 /* ── Tailwind v4 Theme ── */
 @theme {
-  --color-lavender-50: #F3E5F5;
-  --color-lavender-100: #EDE7F6;
-  --color-lavender-200: #D1C4E9;
-  --color-lavender-300: #C5A3D9;
-  --color-lavender-400: #B39DDB;
-  --color-lavender-500: #9575CD;
-  --color-lavender-600: #7E57C2;
-  --color-lavender-700: #673AB7;
-  --color-lavender-800: #512DA8;
-  --color-lavender-900: #311B92;
+  --color-lavender-50: #F5F3FF;
+  --color-lavender-100: #EDE9FE;
+  --color-lavender-200: #DDD6FE;
+  --color-lavender-300: #C4B5FD;
+  --color-lavender-400: #A78BFA;
+  --color-lavender-500: #8B5CF6;
+  --color-lavender-600: #7C3AED;
+  --color-lavender-700: #6D28D9;
+  --color-lavender-800: #5B21B6;
+  --color-lavender-900: #4C1D95;
   --color-cream: #F5F0E8;
   --color-cream-dark: #EBE4D8;
   --color-dark: #1A1A2E;
